@@ -1,10 +1,17 @@
+import { SearchIcon } from '@heroicons/react/solid';
+import Image from 'next/image';
 
 
 const Header = () => {
   return (
     <header>
       <div className="flex items-center justify-center space-x-2 md:space-x-10">
-        <image src="../assets/movie+logo.jpg" alt="logo" />
+        <Image
+          src="/assets/movie+logo.jpg"
+          alt="logo"
+          width={100}
+          height={100}
+        />
 
         <ul className="hidden space-x-4 md:flex">
           <li className="navLink">Movies</li>
@@ -12,9 +19,10 @@ const Header = () => {
           <li className="navLink">New & Popular</li>
           <li className="navLink">My List</li>
         </ul>
-
       </div>
-      <div></div>
+      <div>
+        <SearchIcon className="hidden sm:inline" />
+      </div>
     </header>
   );
 }
