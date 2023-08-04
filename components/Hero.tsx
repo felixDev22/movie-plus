@@ -19,7 +19,7 @@ function Hero({ netflixOriginals }: Props ){
 
 
   return (
-    <div className="flex flex-col space-y-3 lg:pb-12 lg:h-[70vh] lg:justify-end sm:h-[60vh] sm:justify-end">
+    <div className="flex flex-col space-y-3 pt-40 lg:pb-12 lg:h-[70vh] lg:justify-end sm:h-[60vh] sm:justify-end">
       <div className="h-[92vh] w-screen absolute top-0 left-0 -z-10">
         <Image
           src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
