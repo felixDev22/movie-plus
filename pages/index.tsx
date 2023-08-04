@@ -33,7 +33,7 @@ const Home = ({
         </Head>
 
         <Header />
-        <main className="bg-gradient-to-r from-black via-transparent lg:h-[100vh]">
+        <main className="bg-gradient-to-r from-black via-transparent lg:h-[100vh] pl-6 lg:pl-16 lg:space-y-28">
           <Hero netflixOriginals={netflixOriginals} />
           <section></section>
         </main>
