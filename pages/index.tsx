@@ -27,7 +27,7 @@ const Home = ({
 }: Props) => {
   return (
     <>
-      <div className="relative h-screen bg-gradient-to-b from-black-900/10 to-[#010511] lg:h-[140vh]">
+      <div className="relative h-screen bg-gradient-to-b from-gray-900/50 to-[#050000] lg:h-[140vh]">
         <Head>
           <title>Movie World</title>
         </Head>
