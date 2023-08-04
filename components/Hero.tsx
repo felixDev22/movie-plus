@@ -1,4 +1,6 @@
+import { baseUrl } from "@/constants/base";
 import { Movie } from "@/tsdefination";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface Props {
@@ -14,12 +16,16 @@ function Hero({ netflixOriginals }: Props ){
   }, [netflixOriginals])
 
 
-  return(
-  <div>
+  return (
     <div>
-      
+      <div>
+        <Image
+          src={`${baseUrl} ${movie?.backdrop_path || movie?.poster_path}`}
+          alt="poster"
+          layout='fill'
+        />
+      </div>
     </div>
-  </div>
   );
 };
 
