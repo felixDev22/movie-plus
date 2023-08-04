@@ -1,15 +1,30 @@
 import { SearchIcon } from '@heroicons/react/solid';
 import { BellIcon, UserIcon} from '@heroicons/react/solid';
 import Image from 'next/image';
-import Link from 'next/link';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 
 
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+ const handleScrolled = () => {
+  if (window.scrollY > 0) {
+    setScrolled(true);
+  } else {
+    setScrolled(false);
+  }
+}
+  window.addEventListener('scroll', handleScrolled)
+  return () => {
+    window.removeEventListener('scroll', handleScrolled)
+  }
+}, []);
+  
   return (
-    <header>
+    <header className={scrolled ? 'bg-[#080808]' : ''}>
       <div className="flex items-center justify-center space-x-2 md:space-x-10">
         <Image
           src="/assets/movie+logo.png"
