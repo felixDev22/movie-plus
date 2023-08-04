@@ -34,10 +34,15 @@ body {
     @apply fixed z-50 flex w-full justify-between items-center
     px-4 py-4 transition-all lg:px-10 lg:py-6;
   }
-}
+  
 
 @layer components{
   .navLink{
     @apply cursor-pointer text-sm font-light text-[#fff] transition duration-[.5s]
   }
+  .btn{
+    @apply cursor-pointer flex items-center gap-x-3 rounded px-5 py-2 text-sm font-semibold
+    hover:opacity-80 transition-all md:px-8 md:text-lg;
+  }
+}
 }

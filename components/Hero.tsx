@@ -1,5 +1,7 @@
 import { baseUrl } from "@/constants/base";
 import { Movie } from "@/tsdefination";
+import { PlayIcon } from "@heroicons/react/solid";
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -32,7 +34,13 @@ function Hero({ netflixOriginals }: Props ){
       <p className="max-w-xs md:max-w-lg  md:text-lg lg:max-w-2xl lg:text-2xl">
         {movie?.overview}
       </p>
-      
+
+      <div className="flex space-x-3">
+        <button className="btn  bg-[#db020d] text-white">
+          <PlayIcon className="h-5 w-5 text-black" /> Play
+        </button>
+        <button className="btn  bg-white text-black">More Info</button>
+      </div>
     </div>
   );
 };
