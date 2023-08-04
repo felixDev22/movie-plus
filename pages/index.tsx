@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Head from 'next/head';
@@ -15,7 +14,6 @@ interface Props {
   horrorMovies: Movie[];
   romanceMovies: Movie[];
 }
-
 
 const Home = ({
   netflixOriginals,
@@ -36,7 +34,7 @@ const Home = ({
 
         <Header />
         <main>
-          <Hero netflixOriginals={netflixOriginals}/>
+          <Hero netflixOriginals={netflixOriginals} />
           <section></section>
         </main>
       </div>
@@ -44,10 +42,9 @@ const Home = ({
   );
 };
 
-export default Home
+export default Home;
 
 export const getServerSideProps = async () => {
- 
   const [
     netflixOriginals,
     trendingNow,
