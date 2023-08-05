@@ -28,8 +28,8 @@ function Hero({ netflixOriginals }: Props ){
           objectFit="cover"
         />
       </div>
-      <div className="flex flex-col space-y-3 pt-40 lg:pb-12 lg:h-[70vh] lg:justify-end sm:h-[60vh] sm:justify-end pb-16">
-        <h1 className=" font-bold lg:text-7xl md:text-4xl text-4xl">
+      <div className="flex flex-col space-y-3 pt-40 lg:pb-12 lg:h-[70vh] lg:justify-end sm:h-[60vh] sm:justify-end pb-16 left-6">
+        <h1 className="font-bold lg:text-7xl md:text-4xl text-4xl lg:max-w-[80vw] max-w-[70vw]">
           {movie?.name || movie?.title || movie?.original_name}
         </h1>
         <p className="max-w-xs md:max-w-lg  md:text-lg lg:max-w-2xl lg:text-2xl">
