@@ -1,7 +1,7 @@
 import { Movie } from '@/tsdefination';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import { Movieslist } from './Movieslist';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 interface Props {
   title: string;
@@ -25,7 +25,10 @@ const Categories = ({ title, movies }: Props) => {
     }
   };
 
-  const containerScrollWidth = containerRef.current?.scrollWidth ?? 0;
+  useEffect(() => {
+    const containerScrollWidth = containerRef.current?.scrollWidth ?? 0;
+    setScrollPosition(containerRef.current?.scrollLeft ?? 0);
+  }, []);
 
   return (
     <div className="h-40 space-y-0.5 md:space-y-2">
@@ -51,7 +54,8 @@ const Categories = ({ title, movies }: Props) => {
         <ChevronRightIcon
           className={`h-8 w-8 cursor-pointer absolute top-0 bottom-0 right-5 z-30 m-auto hover:scale-100 transition ${
             scrollPosition >=
-            containerScrollWidth - containerRef.current!.clientWidth!
+            (containerRef.current?.scrollWidth ?? 0) -
+              (containerRef.current?.clientWidth ?? 0)
               ? 'opacity-0'
               : 'opacity-100'
           }`}
