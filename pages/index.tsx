@@ -10,10 +10,9 @@ interface Props {
   trendingNow: Movie[];
   topRated: Movie[];
   actionMovies: Movie[];
+  romanceMovies: Movie[];
   documentaries: Movie[];
   comedyMovies: Movie[];
-  horrorMovies: Movie[];
-  romanceMovies: Movie[];
 }
 
 const Home = ({
@@ -21,7 +20,6 @@ const Home = ({
   actionMovies,
   comedyMovies,
   documentaries,
-  horrorMovies,
   romanceMovies,
   topRated,
   trendingNow,
@@ -36,7 +34,7 @@ const Home = ({
         <Header />
         <main className="bg-gradient-to-r from-black via-transparent lg:h-[100vh] pl-6 lg:pl-16 lg:space-y-28">
           <Hero netflixOriginals={netflixOriginals} />
-          <section>
+          <section className='md:space-y-10'>
             <Categories title="Trending Now" movies={trendingNow} />
             <Categories title="Top Rated" movies={topRated} />
             <Categories title="Action" movies={actionMovies} />
